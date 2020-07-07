@@ -9076,8 +9076,8 @@
                         height: "30",
                         width: "30",
                         src: f.default,
-                        alt: "Swagger UI"
-                    }), c.default.createElement("span", null, "swagger")), c.default.createElement("form", {
+                        alt: "Secret API"
+                    }), c.default.createElement("span", null, "secretapi")), c.default.createElement("form", {
                         className: "download-url-wrapper",
                         onSubmit: h
                     }, p.map(function(t, e) {
