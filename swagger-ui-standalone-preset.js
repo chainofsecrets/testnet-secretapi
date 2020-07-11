@@ -9077,7 +9077,7 @@
                         width: "30",
                         src: f.default,
                         alt: "Secret API"
-                    }), c.default.createElement("span", null, "secretapi")), c.default.createElement("form", {
+                    }), c.default.createElement("span", null, "Chain of Secrets")), c.default.createElement("form", {
                         className: "download-url-wrapper",
                         onSubmit: h
                     }, p.map(function(t, e) {
