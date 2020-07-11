@@ -37,16 +37,16 @@
         t.exports = function(t, e) {
             var n, u;
             if (e = e || {}, Object.keys(e).forEach(function(e) {
-                if (-1 === i.indexOf(e)) throw new r('Unknown option "' + e + '" is met in definition of "' + t + '" YAML type.')
-            }), this.tag = t, this.kind = e.kind || null, this.resolve = e.resolve || function() {
-                return !0
-            }, this.construct = e.construct || function(t) {
-                return t
-            }, this.instanceOf = e.instanceOf || null, this.predicate = e.predicate || null, this.represent = e.represent || null, this.defaultStyle = e.defaultStyle || null, this.styleAliases = (n = e.styleAliases || null, u = {}, null !== n && Object.keys(n).forEach(function(t) {
-                n[t].forEach(function(e) {
-                    u[String(e)] = t
-                })
-            }), u), -1 === o.indexOf(this.kind)) throw new r('Unknown kind "' + this.kind + '" is specified for "' + t + '" YAML type.')
+                    if (-1 === i.indexOf(e)) throw new r('Unknown option "' + e + '" is met in definition of "' + t + '" YAML type.')
+                }), this.tag = t, this.kind = e.kind || null, this.resolve = e.resolve || function() {
+                    return !0
+                }, this.construct = e.construct || function(t) {
+                    return t
+                }, this.instanceOf = e.instanceOf || null, this.predicate = e.predicate || null, this.represent = e.represent || null, this.defaultStyle = e.defaultStyle || null, this.styleAliases = (n = e.styleAliases || null, u = {}, null !== n && Object.keys(n).forEach(function(t) {
+                    n[t].forEach(function(e) {
+                        u[String(e)] = t
+                    })
+                }), u), -1 === o.indexOf(this.kind)) throw new r('Unknown kind "' + this.kind + '" is specified for "' + t + '" YAML type.')
         }
     }, function(t, e, n) {
         var r = n(133)("wks"),
@@ -610,11 +610,11 @@
                     throw new i("Wrong number of arguments for Schema.create function")
             }
             if (t = r.toArray(t), e = r.toArray(e), !t.every(function(t) {
-                return t instanceof a
-            })) throw new i("Specified list of super schemas (or a single Schema object) contains a non-Schema object.");
+                    return t instanceof a
+                })) throw new i("Specified list of super schemas (or a single Schema object) contains a non-Schema object.");
             if (!e.every(function(t) {
-                return t instanceof o
-            })) throw new i("Specified list of YAML types (or a single Type object) contains a non-Type object.");
+                    return t instanceof o
+                })) throw new i("Specified list of YAML types (or a single Type object) contains a non-Type object.");
             return new a({
                 include: t,
                 explicit: e
@@ -674,8 +674,8 @@
                 if (t[5] = "de", "5" === Object.getOwnPropertyNames(t)[0]) return !1;
                 for (var e = {}, n = 0; n < 10; n++) e["_" + String.fromCharCode(n)] = n;
                 if ("0123456789" !== Object.getOwnPropertyNames(e).map(function(t) {
-                    return e[t]
-                }).join("")) return !1;
+                        return e[t]
+                    }).join("")) return !1;
                 var r = {};
                 return "abcdefghijklmnopqrst".split("").forEach(function(t) {
                     r[t] = t
@@ -685,9 +685,9 @@
             }
         }() ? Object.assign : function(t, e) {
             for (var n, u, a = function(t) {
-                if (null === t || void 0 === t) throw new TypeError("Object.assign cannot be called with null or undefined");
-                return Object(t)
-            }(t), s = 1; s < arguments.length; s++) {
+                    if (null === t || void 0 === t) throw new TypeError("Object.assign cannot be called with null or undefined");
+                    return Object(t)
+                }(t), s = 1; s < arguments.length; s++) {
                 for (var c in n = Object(arguments[s])) i.call(n, c) && (a[c] = n[c]);
                 if (r) {
                     u = r(n);
@@ -1581,8 +1581,8 @@
             function B(t) {
                 return r.toByteArray(function(t) {
                     if ((t = function(t) {
-                        return t.trim ? t.trim() : t.replace(/^\s+|\s+$/g, "")
-                    }(t).replace(z, "")).length < 2) return "";
+                            return t.trim ? t.trim() : t.replace(/^\s+|\s+$/g, "")
+                        }(t).replace(z, "")).length < 2) return "";
                     for (; t.length % 4 != 0;) t += "=";
                     return t
                 }(t))
@@ -2037,19 +2037,19 @@
             }
             if (o(n = this._events[t])) return !1;
             if (r(n)) switch (arguments.length) {
-                case 1:
-                    n.call(this);
-                    break;
-                case 2:
-                    n.call(this, arguments[1]);
-                    break;
-                case 3:
-                    n.call(this, arguments[1], arguments[2]);
-                    break;
-                default:
-                    a = Array.prototype.slice.call(arguments, 1), n.apply(this, a)
-            } else if (i(n))
-                for (a = Array.prototype.slice.call(arguments, 1), u = (c = n.slice()).length, s = 0; s < u; s++) c[s].apply(this, a);
+                    case 1:
+                        n.call(this);
+                        break;
+                    case 2:
+                        n.call(this, arguments[1]);
+                        break;
+                    case 3:
+                        n.call(this, arguments[1], arguments[2]);
+                        break;
+                    default:
+                        a = Array.prototype.slice.call(arguments, 1), n.apply(this, a)
+                } else if (i(n))
+                    for (a = Array.prototype.slice.call(arguments, 1), u = (c = n.slice()).length, s = 0; s < u; s++) c[s].apply(this, a);
             return !0
         }, n.prototype.addListener = function(t, e) {
             var u;
@@ -2153,8 +2153,8 @@
                             r = n.sync,
                             i = n.writecb;
                         if (function(t) {
-                            t.writing = !1, t.writecb = null, t.length -= t.writelen, t.writelen = 0
-                        }(n), e) ! function(t, e, n, r, i) {
+                                t.writing = !1, t.writecb = null, t.length -= t.writelen, t.writelen = 0
+                            }(n), e) ! function(t, e, n, r, i) {
                             --e.pendingcb, n ? (o.nextTick(i, r), o.nextTick(E, t, e), t._writableState.errorEmitted = !0, t.emit("error", r)) : (i(r), t._writableState.errorEmitted = !0, t.emit("error", r), E(t, e))
                         }(t, n, r, e, i);
                         else {
@@ -2219,9 +2219,9 @@
                 }(t, e), 0 === e.pendingcb && (e.finished = !0, t.emit("finish"))), n
             }
             c.inherits(m, l), g.prototype.getBuffer = function() {
-                for (var t = this.bufferedRequest, e = []; t;) e.push(t), t = t.next;
-                return e
-            },
+                    for (var t = this.bufferedRequest, e = []; t;) e.push(t), t = t.next;
+                    return e
+                },
                 function() {
                     try {
                         Object.defineProperty(g.prototype, "buffer", {
@@ -2231,81 +2231,81 @@
                         })
                     } catch (t) {}
                 }(), "function" == typeof Symbol && Symbol.hasInstance && "function" == typeof Function.prototype[Symbol.hasInstance] ? (d = Function.prototype[Symbol.hasInstance], Object.defineProperty(m, Symbol.hasInstance, {
-                value: function(t) {
-                    return !!d.call(this, t) || this === m && (t && t._writableState instanceof g)
-                }
-            })) : d = function(t) {
-                return t instanceof this
-            }, m.prototype.pipe = function() {
-                this.emit("error", new Error("Cannot pipe, not readable"))
-            }, m.prototype.write = function(t, e, n) {
-                var r, i = this._writableState,
-                    u = !1,
-                    a = !i.objectMode && (r = t, p.isBuffer(r) || r instanceof h);
-                return a && !p.isBuffer(t) && (t = function(t) {
-                    return p.from(t)
-                }(t)), "function" == typeof e && (n = e, e = null), a ? e = "buffer" : e || (e = i.defaultEncoding), "function" != typeof n && (n = y), i.ended ? function(t, e) {
-                    var n = new Error("write after end");
-                    t.emit("error", n), o.nextTick(e, n)
-                }(this, n) : (a || function(t, e, n, r) {
-                    var i = !0,
-                        u = !1;
-                    return null === n ? u = new TypeError("May not write null values to stream") : "string" == typeof n || void 0 === n || e.objectMode || (u = new TypeError("Invalid non-string/buffer chunk")), u && (t.emit("error", u), o.nextTick(r, u), i = !1), i
-                }(this, i, t, n)) && (i.pendingcb++, u = function(t, e, n, r, i, o) {
-                    if (!n) {
-                        var u = function(t, e, n) {
-                            t.objectMode || !1 === t.decodeStrings || "string" != typeof e || (e = p.from(e, n));
-                            return e
-                        }(e, r, i);
-                        r !== u && (n = !0, i = "buffer", r = u)
+                    value: function(t) {
+                        return !!d.call(this, t) || this === m && (t && t._writableState instanceof g)
                     }
-                    var a = e.objectMode ? 1 : r.length;
-                    e.length += a;
-                    var s = e.length < e.highWaterMark;
-                    s || (e.needDrain = !0);
-                    if (e.writing || e.corked) {
-                        var c = e.lastBufferedRequest;
-                        e.lastBufferedRequest = {
-                            chunk: r,
-                            encoding: i,
-                            isBuf: n,
-                            callback: o,
-                            next: null
-                        }, c ? c.next = e.lastBufferedRequest : e.bufferedRequest = e.lastBufferedRequest, e.bufferedRequestCount += 1
-                    } else _(t, e, !1, a, r, i, o);
-                    return s
-                }(this, i, a, t, e, n)), u
-            }, m.prototype.cork = function() {
-                this._writableState.corked++
-            }, m.prototype.uncork = function() {
-                var t = this._writableState;
-                t.corked && (t.corked--, t.writing || t.corked || t.finished || t.bufferProcessing || !t.bufferedRequest || w(this, t))
-            }, m.prototype.setDefaultEncoding = function(t) {
-                if ("string" == typeof t && (t = t.toLowerCase()), !(["hex", "utf8", "utf-8", "ascii", "binary", "base64", "ucs2", "ucs-2", "utf16le", "utf-16le", "raw"].indexOf((t + "").toLowerCase()) > -1)) throw new TypeError("Unknown encoding: " + t);
-                return this._writableState.defaultEncoding = t, this
-            }, Object.defineProperty(m.prototype, "writableHighWaterMark", {
-                enumerable: !1,
-                get: function() {
-                    return this._writableState.highWaterMark
+                })) : d = function(t) {
+                    return t instanceof this
+                }, m.prototype.pipe = function() {
+                    this.emit("error", new Error("Cannot pipe, not readable"))
+                }, m.prototype.write = function(t, e, n) {
+                    var r, i = this._writableState,
+                        u = !1,
+                        a = !i.objectMode && (r = t, p.isBuffer(r) || r instanceof h);
+                    return a && !p.isBuffer(t) && (t = function(t) {
+                        return p.from(t)
+                    }(t)), "function" == typeof e && (n = e, e = null), a ? e = "buffer" : e || (e = i.defaultEncoding), "function" != typeof n && (n = y), i.ended ? function(t, e) {
+                        var n = new Error("write after end");
+                        t.emit("error", n), o.nextTick(e, n)
+                    }(this, n) : (a || function(t, e, n, r) {
+                        var i = !0,
+                            u = !1;
+                        return null === n ? u = new TypeError("May not write null values to stream") : "string" == typeof n || void 0 === n || e.objectMode || (u = new TypeError("Invalid non-string/buffer chunk")), u && (t.emit("error", u), o.nextTick(r, u), i = !1), i
+                    }(this, i, t, n)) && (i.pendingcb++, u = function(t, e, n, r, i, o) {
+                        if (!n) {
+                            var u = function(t, e, n) {
+                                t.objectMode || !1 === t.decodeStrings || "string" != typeof e || (e = p.from(e, n));
+                                return e
+                            }(e, r, i);
+                            r !== u && (n = !0, i = "buffer", r = u)
+                        }
+                        var a = e.objectMode ? 1 : r.length;
+                        e.length += a;
+                        var s = e.length < e.highWaterMark;
+                        s || (e.needDrain = !0);
+                        if (e.writing || e.corked) {
+                            var c = e.lastBufferedRequest;
+                            e.lastBufferedRequest = {
+                                chunk: r,
+                                encoding: i,
+                                isBuf: n,
+                                callback: o,
+                                next: null
+                            }, c ? c.next = e.lastBufferedRequest : e.bufferedRequest = e.lastBufferedRequest, e.bufferedRequestCount += 1
+                        } else _(t, e, !1, a, r, i, o);
+                        return s
+                    }(this, i, a, t, e, n)), u
+                }, m.prototype.cork = function() {
+                    this._writableState.corked++
+                }, m.prototype.uncork = function() {
+                    var t = this._writableState;
+                    t.corked && (t.corked--, t.writing || t.corked || t.finished || t.bufferProcessing || !t.bufferedRequest || w(this, t))
+                }, m.prototype.setDefaultEncoding = function(t) {
+                    if ("string" == typeof t && (t = t.toLowerCase()), !(["hex", "utf8", "utf-8", "ascii", "binary", "base64", "ucs2", "ucs-2", "utf16le", "utf-16le", "raw"].indexOf((t + "").toLowerCase()) > -1)) throw new TypeError("Unknown encoding: " + t);
+                    return this._writableState.defaultEncoding = t, this
+                }, Object.defineProperty(m.prototype, "writableHighWaterMark", {
+                    enumerable: !1,
+                    get: function() {
+                        return this._writableState.highWaterMark
+                    }
+                }), m.prototype._write = function(t, e, n) {
+                    n(new Error("_write() is not implemented"))
+                }, m.prototype._writev = null, m.prototype.end = function(t, e, n) {
+                    var r = this._writableState;
+                    "function" == typeof t ? (n = t, t = null, e = null) : "function" == typeof e && (n = e, e = null), null !== t && void 0 !== t && this.write(t, e), r.corked && (r.corked = 1, this.uncork()), r.ending || r.finished || function(t, e, n) {
+                        e.ending = !0, E(t, e), n && (e.finished ? o.nextTick(n) : t.once("finish", n));
+                        e.ended = !0, t.writable = !1
+                    }(this, r, n)
+                }, Object.defineProperty(m.prototype, "destroyed", {
+                    get: function() {
+                        return void 0 !== this._writableState && this._writableState.destroyed
+                    },
+                    set: function(t) {
+                        this._writableState && (this._writableState.destroyed = t)
+                    }
+                }), m.prototype.destroy = v.destroy, m.prototype._undestroy = v.undestroy, m.prototype._destroy = function(t, e) {
+                    this.end(), e(t)
                 }
-            }), m.prototype._write = function(t, e, n) {
-                n(new Error("_write() is not implemented"))
-            }, m.prototype._writev = null, m.prototype.end = function(t, e, n) {
-                var r = this._writableState;
-                "function" == typeof t ? (n = t, t = null, e = null) : "function" == typeof e && (n = e, e = null), null !== t && void 0 !== t && this.write(t, e), r.corked && (r.corked = 1, this.uncork()), r.ending || r.finished || function(t, e, n) {
-                    e.ending = !0, E(t, e), n && (e.finished ? o.nextTick(n) : t.once("finish", n));
-                    e.ended = !0, t.writable = !1
-                }(this, r, n)
-            }, Object.defineProperty(m.prototype, "destroyed", {
-                get: function() {
-                    return void 0 !== this._writableState && this._writableState.destroyed
-                },
-                set: function(t) {
-                    this._writableState && (this._writableState.destroyed = t)
-                }
-            }), m.prototype.destroy = v.destroy, m.prototype._undestroy = v.undestroy, m.prototype._destroy = function(t, e) {
-                this.end(), e(t)
-            }
         }).call(e, n(34), n(190).setImmediate, n(11))
     }, function(t, e, n) {
         "use strict";
@@ -2342,17 +2342,17 @@
                 var e, n, i = document.createTextNode(""),
                     o = 0;
                 return new t(function() {
-                    var t;
-                    if (e) n && (e = n.concat(e));
-                    else {
-                        if (!n) return;
-                        e = n
-                    }
-                    if (n = e, e = null, "function" == typeof n) return t = n, n = null, void t();
-                    for (i.data = o = ++o % 2; n;) t = n.shift(), n.length || (n = null), t()
-                }).observe(i, {
-                    characterData: !0
-                }),
+                        var t;
+                        if (e) n && (e = n.concat(e));
+                        else {
+                            if (!n) return;
+                            e = n
+                        }
+                        if (n = e, e = null, "function" == typeof n) return t = n, n = null, void t();
+                        for (i.data = o = ++o % 2; n;) t = n.shift(), n.length || (n = null), t()
+                    }).observe(i, {
+                        characterData: !0
+                    }),
                     function(t) {
                         r(t), e ? "function" == typeof e ? e = [e, t] : e.push(t) : (e = t, i.data = o = ++o % 2)
                     }
@@ -2458,13 +2458,13 @@
                 k = v ? S ? w("entries") : j : void 0,
                 I = "Array" == e && A.entries || O;
             if (I && (b = f(I.call(new t))) !== Object.prototype && b.next && (c(b, x, !0), r || "function" == typeof b[l] || u(b, l, h)), S && O && "values" !== O.name && (E = !0, j = function() {
-                return O.call(this)
-            }), r && !g || !p && !E && A[l] || u(A, l, j), a[e] = j, a[x] = h, v)
+                    return O.call(this)
+                }), r && !g || !p && !E && A[l] || u(A, l, j), a[e] = j, a[x] = h, v)
                 if (m = {
-                    values: S ? j : w("values"),
-                    keys: y ? j : w("keys"),
-                    entries: k
-                }, g)
+                        values: S ? j : w("values"),
+                        keys: y ? j : w("keys"),
+                        entries: k
+                    }, g)
                     for (_ in m) _ in A || o(A, _, m[_]);
                 else i(i.P + i.F * (p || E), e, m);
             return m
@@ -2624,13 +2624,13 @@
                 k = v ? S ? w("entries") : j : void 0,
                 I = "Array" == e && A.entries || O;
             if (I && (b = f(I.call(new t))) !== Object.prototype && b.next && (c(b, x, !0), r || "function" == typeof b[l] || u(b, l, h)), S && O && "values" !== O.name && (E = !0, j = function() {
-                return O.call(this)
-            }), r && !g || !p && !E && A[l] || u(A, l, j), a[e] = j, a[x] = h, v)
+                    return O.call(this)
+                }), r && !g || !p && !E && A[l] || u(A, l, j), a[e] = j, a[x] = h, v)
                 if (m = {
-                    values: S ? j : w("values"),
-                    keys: y ? j : w("keys"),
-                    entries: k
-                }, g)
+                        values: S ? j : w("values"),
+                        keys: y ? j : w("keys"),
+                        entries: k
+                    }, g)
                     for (_ in m) _ in A || o(A, _, m[_]);
                 else i(i.P + i.F * (p || E), e, m);
             return m
@@ -3157,10 +3157,10 @@
                     if (n && "object" === l)
                         if ("object" === (void 0 === i ? "undefined" : (0, s.default)(i))) E = !0;
                         else if ("string" == typeof i) try {
-                            JSON.parse(i), E = !0
-                        } catch (t) {
-                            return r.push("Parameter string value must be valid JSON"), r
-                        }
+                        JSON.parse(i), E = !0
+                    } catch (t) {
+                        return r.push("Parameter string value must be valid JSON"), r
+                    }
                     var A = [y, g, _, b, w, x, S, E].some(function(t) {
                         return !!t
                     });
@@ -3841,13 +3841,13 @@
                     if (!kt) {
                         if (void 0 !== (e = t.propertyIsEnumerable && t.propertyIsEnumerable[Ct])) return e;
                         if (void 0 !== (e = function(t) {
-                            if (t && t.nodeType > 0) switch (t.nodeType) {
-                                case 1:
-                                    return t.uniqueID;
-                                case 9:
-                                    return t.documentElement && t.documentElement.uniqueID
-                            }
-                        }(t))) return e
+                                if (t && t.nodeType > 0) switch (t.nodeType) {
+                                    case 1:
+                                        return t.uniqueID;
+                                    case 9:
+                                        return t.documentElement && t.documentElement.uniqueID
+                                }
+                            }(t))) return e
                     }
                     e = ++Tt, 1073741824 & Tt && (Tt = 0);
                     if (Mt) It.set(t, e);
@@ -4106,12 +4106,12 @@
                     return 0 !== t.size
                 })).length ? t : 0 !== t.size || t.__ownerID || 1 !== n.length ? t.withMutations(function(t) {
                     for (var r = e ? function(n, r) {
-                        t.update(r, m, function(t) {
-                            return t === m ? n : e(t, n, r)
-                        })
-                    } : function(e, n) {
-                        t.set(n, e)
-                    }, i = 0; i < n.length; i++) n[i].forEach(r)
+                            t.update(r, m, function(t) {
+                                return t === m ? n : e(t, n, r)
+                            })
+                        } : function(e, n) {
+                            t.set(n, e)
+                        }, i = 0; i < n.length; i++) n[i].forEach(r)
                 }) : t.constructor(n[0])
             }
 
@@ -4356,7 +4356,7 @@
                 })
             }, pe.prototype.__iterate = function(t, e) {
                 for (var n, r = 0, i = be(this, e);
-                     (n = i()) !== _e && !1 !== t(n, r++, this););
+                    (n = i()) !== _e && !1 !== t(n, r++, this););
                 return r
             }, pe.prototype.__ensureOwner = function(t) {
                 return t === this.__ownerID ? this : t ? we(this._origin, this._capacity, this._level, this._root, this._tail, t, this.__hash) : (this.__ownerID = t, this)
@@ -5942,8 +5942,8 @@
                 }
                 if (g) {
                     if (!i(e, function(t, e) {
-                        if (!o(g, e) && (m === t || c(m, t, n, s, f))) return g.push(e)
-                    })) {
+                            if (!o(g, e) && (m === t || c(m, t, n, s, f))) return g.push(e)
+                        })) {
                         y = !1;
                         break
                     }
@@ -6307,14 +6307,14 @@
                     n = this._readableState,
                     r = !1;
                 for (var i in t.on("end", function() {
-                    if (h("wrapped end"), n.decoder && !n.ended) {
-                        var t = n.decoder.end();
-                        t && t.length && e.push(t)
-                    }
-                    e.push(null)
-                }), t.on("data", function(i) {
-                    (h("wrapped data"), n.decoder && (i = n.decoder.write(i)), !n.objectMode || null !== i && void 0 !== i) && ((n.objectMode || i && i.length) && (e.push(i) || (r = !0, t.pause())))
-                }), t) void 0 === this[i] && "function" == typeof t[i] && (this[i] = function(e) {
+                        if (h("wrapped end"), n.decoder && !n.ended) {
+                            var t = n.decoder.end();
+                            t && t.length && e.push(t)
+                        }
+                        e.push(null)
+                    }), t.on("data", function(i) {
+                        (h("wrapped data"), n.decoder && (i = n.decoder.write(i)), !n.objectMode || null !== i && void 0 !== i) && ((n.objectMode || i && i.length) && (e.push(i) || (r = !0, t.pause())))
+                    }), t) void 0 === this[i] && "function" == typeof t[i] && (this[i] = function(e) {
                     return function() {
                         return t[e].apply(t, arguments)
                     }
@@ -6660,18 +6660,18 @@
         t.exports = function(t, e) {
             var n, s = Object(r(e));
             if (t = Object(r(t)), u(s).forEach(function(r) {
-                try {
-                    i(t, r, o(e, r))
-                } catch (t) {
-                    n = t
-                }
-            }), "function" == typeof a && a(s).forEach(function(r) {
-                try {
-                    i(t, r, o(e, r))
-                } catch (t) {
-                    n = t
-                }
-            }), void 0 !== n) throw n;
+                    try {
+                        i(t, r, o(e, r))
+                    } catch (t) {
+                        n = t
+                    }
+                }), "function" == typeof a && a(s).forEach(function(r) {
+                    try {
+                        i(t, r, o(e, r))
+                    } catch (t) {
+                        n = t
+                    }
+                }), void 0 !== n) throw n;
             return t
         }
     }, function(t, e, n) {
@@ -6993,38 +6993,38 @@
         }
     }, function(t, e, n) {
         for (var r = n(235), i = n(139), o = n(30), u = n(5), a = n(17), s = n(44), c = n(1), f = c("iterator"), l = c("toStringTag"), p = s.Array, h = {
-            CSSRuleList: !0,
-            CSSStyleDeclaration: !1,
-            CSSValueList: !1,
-            ClientRectList: !1,
-            DOMRectList: !1,
-            DOMStringList: !1,
-            DOMTokenList: !0,
-            DataTransferItemList: !1,
-            FileList: !1,
-            HTMLAllCollection: !1,
-            HTMLCollection: !1,
-            HTMLFormElement: !1,
-            HTMLSelectElement: !1,
-            MediaList: !0,
-            MimeTypeArray: !1,
-            NamedNodeMap: !1,
-            NodeList: !0,
-            PaintRequestList: !1,
-            Plugin: !1,
-            PluginArray: !1,
-            SVGLengthList: !1,
-            SVGNumberList: !1,
-            SVGPathSegList: !1,
-            SVGPointList: !1,
-            SVGStringList: !1,
-            SVGTransformList: !1,
-            SourceBufferList: !1,
-            StyleSheetList: !0,
-            TextTrackCueList: !1,
-            TextTrackList: !1,
-            TouchList: !1
-        }, d = i(h), v = 0; v < d.length; v++) {
+                CSSRuleList: !0,
+                CSSStyleDeclaration: !1,
+                CSSValueList: !1,
+                ClientRectList: !1,
+                DOMRectList: !1,
+                DOMStringList: !1,
+                DOMTokenList: !0,
+                DataTransferItemList: !1,
+                FileList: !1,
+                HTMLAllCollection: !1,
+                HTMLCollection: !1,
+                HTMLFormElement: !1,
+                HTMLSelectElement: !1,
+                MediaList: !0,
+                MimeTypeArray: !1,
+                NamedNodeMap: !1,
+                NodeList: !0,
+                PaintRequestList: !1,
+                Plugin: !1,
+                PluginArray: !1,
+                SVGLengthList: !1,
+                SVGNumberList: !1,
+                SVGPathSegList: !1,
+                SVGPointList: !1,
+                SVGStringList: !1,
+                SVGTransformList: !1,
+                SourceBufferList: !1,
+                StyleSheetList: !0,
+                TextTrackCueList: !1,
+                TextTrackList: !1,
+                TouchList: !1
+            }, d = i(h), v = 0; v < d.length; v++) {
             var y, g = d[v],
                 m = h[g],
                 _ = u[g],
@@ -7101,16 +7101,16 @@
                     var n = t._c;
                     m(function() {
                         for (var r = t._v, i = 1 == t._s, o = 0, u = function(e) {
-                            var n, o, u, a = i ? e.ok : e.fail,
-                                s = e.resolve,
-                                c = e.reject,
-                                f = e.domain;
-                            try {
-                                a ? (i || (2 == t._h && P(t), t._h = 1), !0 === a ? n = r : (f && f.enter(), n = a(r), f && (f.exit(), u = !0)), n === e.promise ? c(x("Promise-chain cycle")) : (o = I(n)) ? o.call(n, s, c) : s(n)) : c(r)
-                            } catch (t) {
-                                f && !u && f.exit(), c(t)
-                            }
-                        }; n.length > o;) u(n[o++]);
+                                var n, o, u, a = i ? e.ok : e.fail,
+                                    s = e.resolve,
+                                    c = e.reject,
+                                    f = e.domain;
+                                try {
+                                    a ? (i || (2 == t._h && P(t), t._h = 1), !0 === a ? n = r : (f && f.enter(), n = a(r), f && (f.exit(), u = !0)), n === e.promise ? c(x("Promise-chain cycle")) : (o = I(n)) ? o.call(n, s, c) : s(n)) : c(r)
+                                } catch (t) {
+                                    f && !u && f.exit(), c(t)
+                                }
+                            }; n.length > o;) u(n[o++]);
                         t._c = [], t._n = !1, e && !t._h && T(t)
                     })
                 }
@@ -7120,11 +7120,11 @@
                     var e, n, r, i = t._v,
                         o = C(t);
                     if (o && (e = b(function() {
-                        A ? S.emit("unhandledRejection", i, t) : (n = s.onunhandledrejection) ? n({
-                            promise: t,
-                            reason: i
-                        }) : (r = s.console) && r.error && r.error("Unhandled promise rejection", i)
-                    }), t._h = A || C(t) ? 2 : 1), t._a = void 0, o && e.e) throw e.v
+                            A ? S.emit("unhandledRejection", i, t) : (n = s.onunhandledrejection) ? n({
+                                promise: t,
+                                reason: i
+                            }) : (r = s.console) && r.error && r.error("Unhandled promise rejection", i)
+                        }), t._h = A || C(t) ? 2 : 1), t._a = void 0, o && e.e) throw e.v
                 })
             },
             C = function(t) {
@@ -7539,7 +7539,7 @@
                 o = r(t);
             if (o < 0 || o == 1 / 0) throw RangeError("Count can't be negative");
             for (; o > 0;
-                   (o >>>= 1) && (e += e)) 1 & o && (n += e);
+                (o >>>= 1) && (e += e)) 1 & o && (n += e);
             return n
         }
     }, function(t, e, n) {
@@ -7692,9 +7692,9 @@
                         v = void 0 === e ? 4294967295 : e >>> 0,
                         y = new RegExp(t.source, h + "g");
                     for (a || (r = new RegExp("^" + y.source + "$(?!\\s)", h));
-                         (s = y.exec(n)) && !((c = s.index + s[0].length) > d && (p.push(n.slice(d, s.index)), !a && s.length > 1 && s[0].replace(r, function() {
-                             for (l = 1; l < arguments.length - 2; l++) void 0 === arguments[l] && (s[l] = void 0)
-                         }), s.length > 1 && s.index < n.length && u.apply(p, s.slice(1)), f = s[0].length, d = c, p.length >= v));) y.lastIndex === s.index && y.lastIndex++;
+                        (s = y.exec(n)) && !((c = s.index + s[0].length) > d && (p.push(n.slice(d, s.index)), !a && s.length > 1 && s[0].replace(r, function() {
+                            for (l = 1; l < arguments.length - 2; l++) void 0 === arguments[l] && (s[l] = void 0)
+                        }), s.length > 1 && s.index < n.length && u.apply(p, s.slice(1)), f = s[0].length, d = c, p.length >= v));) y.lastIndex === s.index && y.lastIndex++;
                     return d === n.length ? !f && y.test("") || p.push("") : p.push(n.slice(d)), p.length > v ? p.slice(0, v) : p
                 }
             } else "0".split(void 0, 0).length && (r = function(t, e) {
@@ -9100,8 +9100,8 @@
             return 3 * (n + r) / 4 - r
         }, e.toByteArray = function(t) {
             for (var e, n = c(t), r = n[0], u = n[1], a = new o(function(t, e, n) {
-                return 3 * (e + n) / 4 - n
-            }(0, r, u)), s = 0, f = u > 0 ? r - 4 : r, l = 0; l < f; l += 4) e = i[t.charCodeAt(l)] << 18 | i[t.charCodeAt(l + 1)] << 12 | i[t.charCodeAt(l + 2)] << 6 | i[t.charCodeAt(l + 3)], a[s++] = e >> 16 & 255, a[s++] = e >> 8 & 255, a[s++] = 255 & e;
+                    return 3 * (e + n) / 4 - n
+                }(0, r, u)), s = 0, f = u > 0 ? r - 4 : r, l = 0; l < f; l += 4) e = i[t.charCodeAt(l)] << 18 | i[t.charCodeAt(l + 1)] << 12 | i[t.charCodeAt(l + 2)] << 6 | i[t.charCodeAt(l + 3)], a[s++] = e >> 16 & 255, a[s++] = e >> 8 & 255, a[s++] = 255 & e;
             2 === u && (e = i[t.charCodeAt(l)] << 2 | i[t.charCodeAt(l + 1)] >> 4, a[s++] = 255 & e);
             1 === u && (e = i[t.charCodeAt(l)] << 10 | i[t.charCodeAt(l + 1)] << 4 | i[t.charCodeAt(l + 2)] >> 2, a[s++] = e >> 8 & 255, a[s++] = 255 & e);
             return a
@@ -10431,7 +10431,7 @@
                 if (null == n) return n;
                 if (!r(n)) return t(n, i);
                 for (var o = n.length, u = e ? o : -1, a = Object(n);
-                     (e ? u-- : ++u < o) && !1 !== i(a[u], u, a););
+                    (e ? u-- : ++u < o) && !1 !== i(a[u], u, a););
                 return n
             }
         }
@@ -11129,12 +11129,12 @@
         t.exports = function(t, e) {
             var n, u, a, s = o(arguments.length, 2);
             for (t = Object(i(t)), a = function(r) {
-                try {
-                    t[r] = e[r]
-                } catch (t) {
-                    n || (n = t)
-                }
-            }, u = 1; u < s; ++u) e = arguments[u], r(e).forEach(a);
+                    try {
+                        t[r] = e[r]
+                    } catch (t) {
+                        n || (n = t)
+                    }
+                }, u = 1; u < s; ++u) e = arguments[u], r(e).forEach(a);
             if (void 0 !== n) throw n;
             return t
         }
@@ -11312,9 +11312,9 @@
                     for (_ = a(w).call(t), e && (y = new e), b = _.next(), n = 0; !b.done;) x = S ? p.call(S, E, b.value, n) : b.value, e ? (h.value = x, d(y, n, h)) : y[n] = x, b = _.next(), ++n;
                     g = n
                 } else if (f(t)) {
-                    for (g = t.length, e && (y = new e), n = 0, v = 0; n < g; ++n) x = t[n], n + 1 < g && (m = x.charCodeAt(0)) >= 55296 && m <= 56319 && (x += t[++n]), x = S ? p.call(S, E, x, v) : x, e ? (h.value = x, d(y, v, h)) : y[v] = x, ++v;
-                    g = v
-                }
+                for (g = t.length, e && (y = new e), n = 0, v = 0; n < g; ++n) x = t[n], n + 1 < g && (m = x.charCodeAt(0)) >= 55296 && m <= 56319 && (x += t[++n]), x = S ? p.call(S, E, x, v) : x, e ? (h.value = x, d(y, v, h)) : y[v] = x, ++v;
+                g = v
+            }
             if (void 0 === g)
                 for (g = u(t.length), e && (y = new e(g)), n = 0; n < g; ++n) x = S ? p.call(S, E, t[n], n) : t[n], e ? (h.value = x, d(y, n, h)) : y[n] = x;
             return e && (h.value = null, y.length = g), y
@@ -11501,9 +11501,9 @@
                     if (0 === s) a[s] = ++t;
                     else {
                         for (a[s] || (a[s] = [
-                            [],
-                            []
-                        ]), a = a[s]; u < s - 1;) - 1 === (o = r.call(a[0], i[u])) && (o = a[0].push(i[u]) - 1, a[1].push([
+                                [],
+                                []
+                            ]), a = a[s]; u < s - 1;) - 1 === (o = r.call(a[0], i[u])) && (o = a[0].push(i[u]) - 1, a[1].push([
                             [],
                             []
                         ])), a = a[1][o], ++u; - 1 === (o = r.call(a[0], i[u])) && (o = a[0].push(i[u]) - 1), a[1][o] = ++t
@@ -12132,7 +12132,7 @@
             for (null !== t.anchor && (t.anchorMap[t.anchor] = u), r = t.input.charCodeAt(t.position); 0 !== r && 45 === r && S(t.input.charCodeAt(t.position + 1));)
                 if (a = !0, t.position++, F(t, !0, -1) && t.lineIndent <= e) u.push(null), r = t.input.charCodeAt(t.position);
                 else if (n = t.line, V(t, e, l, !1, !0), u.push(t.result), F(t, !0, -1), r = t.input.charCodeAt(t.position), (t.line === n || t.lineIndent > e) && 0 !== r) C(t, "bad indentation of a sequence entry");
-                else if (t.lineIndent < e) break;
+            else if (t.lineIndent < e) break;
             return !!a && (t.tag = i, t.anchor = o, t.kind = "sequence", t.result = u, !0)
         }
 
@@ -12166,145 +12166,145 @@
             if (null !== t.listener && t.listener("open", t), t.tag = null, t.anchor = null, t.kind = null, t.result = null, u = a = y = p === n || l === n, i && F(t, !0, -1) && (T = !0, t.lineIndent > e ? M = 1 : t.lineIndent === e ? M = 0 : t.lineIndent < e && (M = -1)), 1 === M)
                 for (; Y(t) || W(t);) F(t, !0, -1) ? (T = !0, y = u, t.lineIndent > e ? M = 1 : t.lineIndent === e ? M = 0 : t.lineIndent < e && (M = -1)) : y = !1;
             if (y && (y = T || o), 1 !== M && p !== n || (b = c === n || f === n ? e : e + 1, O = t.position - t.lineStart, 1 === M ? y && (q(t, O) || function(t, e, n) {
-                var r, i, o, u, a, s = t.tag,
-                    c = t.anchor,
-                    l = {},
-                    h = {},
-                    d = null,
-                    v = null,
-                    y = null,
-                    g = !1,
-                    m = !1;
-                for (null !== t.anchor && (t.anchorMap[t.anchor] = l), a = t.input.charCodeAt(t.position); 0 !== a;) {
-                    if (r = t.input.charCodeAt(t.position + 1), o = t.line, u = t.position, 63 !== a && 58 !== a || !S(r)) {
-                        if (!V(t, n, f, !1, !0)) break;
-                        if (t.line === o) {
-                            for (a = t.input.charCodeAt(t.position); x(a);) a = t.input.charCodeAt(++t.position);
-                            if (58 === a) S(a = t.input.charCodeAt(++t.position)) || C(t, "a whitespace character is expected after the key-value separator within a block mapping"), g && (D(t, l, h, d, v, null), d = v = y = null), m = !0, g = !1, i = !1, d = t.tag, v = t.result;
-                            else {
+                    var r, i, o, u, a, s = t.tag,
+                        c = t.anchor,
+                        l = {},
+                        h = {},
+                        d = null,
+                        v = null,
+                        y = null,
+                        g = !1,
+                        m = !1;
+                    for (null !== t.anchor && (t.anchorMap[t.anchor] = l), a = t.input.charCodeAt(t.position); 0 !== a;) {
+                        if (r = t.input.charCodeAt(t.position + 1), o = t.line, u = t.position, 63 !== a && 58 !== a || !S(r)) {
+                            if (!V(t, n, f, !1, !0)) break;
+                            if (t.line === o) {
+                                for (a = t.input.charCodeAt(t.position); x(a);) a = t.input.charCodeAt(++t.position);
+                                if (58 === a) S(a = t.input.charCodeAt(++t.position)) || C(t, "a whitespace character is expected after the key-value separator within a block mapping"), g && (D(t, l, h, d, v, null), d = v = y = null), m = !0, g = !1, i = !1, d = t.tag, v = t.result;
+                                else {
+                                    if (!m) return t.tag = s, t.anchor = c, !0;
+                                    C(t, "can not read an implicit mapping pair; a colon is missed")
+                                }
+                            } else {
                                 if (!m) return t.tag = s, t.anchor = c, !0;
-                                C(t, "can not read an implicit mapping pair; a colon is missed")
+                                C(t, "can not read a block mapping entry; a multiline key may not be an implicit key")
                             }
-                        } else {
-                            if (!m) return t.tag = s, t.anchor = c, !0;
-                            C(t, "can not read a block mapping entry; a multiline key may not be an implicit key")
-                        }
-                    } else 63 === a ? (g && (D(t, l, h, d, v, null), d = v = y = null), m = !0, g = !0, i = !0) : g ? (g = !1, i = !0) : C(t, "incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line"), t.position += 1, a = r;
-                    if ((t.line === o || t.lineIndent > e) && (V(t, e, p, !0, i) && (g ? v = t.result : y = t.result), g || (D(t, l, h, d, v, y, o, u), d = v = y = null), F(t, !0, -1), a = t.input.charCodeAt(t.position)), t.lineIndent > e && 0 !== a) C(t, "bad indentation of a mapping entry");
-                    else if (t.lineIndent < e) break
-                }
-                return g && D(t, l, h, d, v, null), m && (t.tag = s, t.anchor = c, t.kind = "mapping", t.result = l), m
-            }(t, O, b)) || function(t, e) {
-                var n, r, i, o, u, a, s, f, l, p, h = !0,
-                    d = t.tag,
-                    v = t.anchor,
-                    y = {};
-                if (91 === (p = t.input.charCodeAt(t.position))) i = 93, a = !1, r = [];
-                else {
-                    if (123 !== p) return !1;
-                    i = 125, a = !0, r = {}
-                }
-                for (null !== t.anchor && (t.anchorMap[t.anchor] = r), p = t.input.charCodeAt(++t.position); 0 !== p;) {
-                    if (F(t, !0, e), (p = t.input.charCodeAt(t.position)) === i) return t.position++, t.tag = d, t.anchor = v, t.kind = a ? "mapping" : "sequence", t.result = r, !0;
-                    h || C(t, "missed comma between flow collection entries"), f = s = l = null, o = u = !1, 63 === p && S(t.input.charCodeAt(t.position + 1)) && (o = u = !0, t.position++, F(t, !0, e)), n = t.line, V(t, e, c, !1, !0), f = t.tag, s = t.result, F(t, !0, e), p = t.input.charCodeAt(t.position), !u && t.line !== n || 58 !== p || (o = !0, p = t.input.charCodeAt(++t.position), F(t, !0, e), V(t, e, c, !1, !0), l = t.result), a ? D(t, r, y, f, s, l) : o ? r.push(D(t, null, y, f, s, l)) : r.push(s), F(t, !0, e), 44 === (p = t.input.charCodeAt(t.position)) ? (h = !0, p = t.input.charCodeAt(++t.position)) : h = !1
-                }
-                C(t, "unexpected end of the stream within a flow collection")
-            }(t, b) ? P = !0 : (a && function(t, e) {
-                var n, i, o, u, a, s = h,
-                    c = !1,
-                    f = !1,
-                    l = e,
-                    p = 0,
-                    y = !1;
-                if (124 === (u = t.input.charCodeAt(t.position))) i = !1;
-                else {
-                    if (62 !== u) return !1;
-                    i = !0
-                }
-                for (t.kind = "scalar", t.result = ""; 0 !== u;)
-                    if (43 === (u = t.input.charCodeAt(++t.position)) || 45 === u) h === s ? s = 43 === u ? v : d : C(t, "repeat of a chomping mode identifier");
-                    else {
-                        if (!((o = 48 <= (a = u) && a <= 57 ? a - 48 : -1) >= 0)) break;
-                        0 === o ? C(t, "bad explicit indentation width of a block scalar; it cannot be less than one") : f ? C(t, "repeat of an indentation width identifier") : (l = e + o - 1, f = !0)
+                        } else 63 === a ? (g && (D(t, l, h, d, v, null), d = v = y = null), m = !0, g = !0, i = !0) : g ? (g = !1, i = !0) : C(t, "incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line"), t.position += 1, a = r;
+                        if ((t.line === o || t.lineIndent > e) && (V(t, e, p, !0, i) && (g ? v = t.result : y = t.result), g || (D(t, l, h, d, v, y, o, u), d = v = y = null), F(t, !0, -1), a = t.input.charCodeAt(t.position)), t.lineIndent > e && 0 !== a) C(t, "bad indentation of a mapping entry");
+                        else if (t.lineIndent < e) break
                     }
-                if (x(u)) {
-                    do {
-                        u = t.input.charCodeAt(++t.position)
-                    } while (x(u));
-                    if (35 === u)
+                    return g && D(t, l, h, d, v, null), m && (t.tag = s, t.anchor = c, t.kind = "mapping", t.result = l), m
+                }(t, O, b)) || function(t, e) {
+                    var n, r, i, o, u, a, s, f, l, p, h = !0,
+                        d = t.tag,
+                        v = t.anchor,
+                        y = {};
+                    if (91 === (p = t.input.charCodeAt(t.position))) i = 93, a = !1, r = [];
+                    else {
+                        if (123 !== p) return !1;
+                        i = 125, a = !0, r = {}
+                    }
+                    for (null !== t.anchor && (t.anchorMap[t.anchor] = r), p = t.input.charCodeAt(++t.position); 0 !== p;) {
+                        if (F(t, !0, e), (p = t.input.charCodeAt(t.position)) === i) return t.position++, t.tag = d, t.anchor = v, t.kind = a ? "mapping" : "sequence", t.result = r, !0;
+                        h || C(t, "missed comma between flow collection entries"), f = s = l = null, o = u = !1, 63 === p && S(t.input.charCodeAt(t.position + 1)) && (o = u = !0, t.position++, F(t, !0, e)), n = t.line, V(t, e, c, !1, !0), f = t.tag, s = t.result, F(t, !0, e), p = t.input.charCodeAt(t.position), !u && t.line !== n || 58 !== p || (o = !0, p = t.input.charCodeAt(++t.position), F(t, !0, e), V(t, e, c, !1, !0), l = t.result), a ? D(t, r, y, f, s, l) : o ? r.push(D(t, null, y, f, s, l)) : r.push(s), F(t, !0, e), 44 === (p = t.input.charCodeAt(t.position)) ? (h = !0, p = t.input.charCodeAt(++t.position)) : h = !1
+                    }
+                    C(t, "unexpected end of the stream within a flow collection")
+                }(t, b) ? P = !0 : (a && function(t, e) {
+                    var n, i, o, u, a, s = h,
+                        c = !1,
+                        f = !1,
+                        l = e,
+                        p = 0,
+                        y = !1;
+                    if (124 === (u = t.input.charCodeAt(t.position))) i = !1;
+                    else {
+                        if (62 !== u) return !1;
+                        i = !0
+                    }
+                    for (t.kind = "scalar", t.result = ""; 0 !== u;)
+                        if (43 === (u = t.input.charCodeAt(++t.position)) || 45 === u) h === s ? s = 43 === u ? v : d : C(t, "repeat of a chomping mode identifier");
+                        else {
+                            if (!((o = 48 <= (a = u) && a <= 57 ? a - 48 : -1) >= 0)) break;
+                            0 === o ? C(t, "bad explicit indentation width of a block scalar; it cannot be less than one") : f ? C(t, "repeat of an indentation width identifier") : (l = e + o - 1, f = !0)
+                        }
+                    if (x(u)) {
                         do {
                             u = t.input.charCodeAt(++t.position)
-                        } while (!w(u) && 0 !== u)
-                }
-                for (; 0 !== u;) {
-                    for (z(t), t.lineIndent = 0, u = t.input.charCodeAt(t.position);
-                         (!f || t.lineIndent < l) && 32 === u;) t.lineIndent++, u = t.input.charCodeAt(++t.position);
-                    if (!f && t.lineIndent > l && (l = t.lineIndent), w(u)) p++;
-                    else {
-                        if (t.lineIndent < l) {
-                            s === v ? t.result += r.repeat("\n", c ? 1 + p : p) : s === h && c && (t.result += "\n");
-                            break
-                        }
-                        for (i ? x(u) ? (y = !0, t.result += r.repeat("\n", c ? 1 + p : p)) : y ? (y = !1, t.result += r.repeat("\n", p + 1)) : 0 === p ? c && (t.result += " ") : t.result += r.repeat("\n", p) : t.result += r.repeat("\n", c ? 1 + p : p), c = !0, f = !0, p = 0, n = t.position; !w(u) && 0 !== u;) u = t.input.charCodeAt(++t.position);
-                        N(t, n, t.position, !1)
+                        } while (x(u));
+                        if (35 === u)
+                            do {
+                                u = t.input.charCodeAt(++t.position)
+                            } while (!w(u) && 0 !== u)
                     }
-                }
-                return !0
-            }(t, b) || function(t, e) {
-                var n, r, i;
-                if (39 !== (n = t.input.charCodeAt(t.position))) return !1;
-                for (t.kind = "scalar", t.result = "", t.position++, r = i = t.position; 0 !== (n = t.input.charCodeAt(t.position));)
-                    if (39 === n) {
-                        if (N(t, r, t.position, !0), 39 !== (n = t.input.charCodeAt(++t.position))) return !0;
-                        r = t.position, t.position++, i = t.position
-                    } else w(n) ? (N(t, r, i, !0), B(t, F(t, !1, e)), r = i = t.position) : t.position === t.lineStart && U(t) ? C(t, "unexpected end of the document within a single quoted scalar") : (t.position++, i = t.position);
-                C(t, "unexpected end of the stream within a single quoted scalar")
-            }(t, b) || function(t, e) {
-                var n, r, i, o, u, a, s;
-                if (34 !== (a = t.input.charCodeAt(t.position))) return !1;
-                for (t.kind = "scalar", t.result = "", t.position++, n = r = t.position; 0 !== (a = t.input.charCodeAt(t.position));) {
-                    if (34 === a) return N(t, n, t.position, !0), t.position++, !0;
-                    if (92 === a) {
-                        if (N(t, n, t.position, !0), w(a = t.input.charCodeAt(++t.position))) F(t, !1, e);
-                        else if (a < 256 && k[a]) t.result += I[a], t.position++;
-                        else if ((u = 120 === (s = a) ? 2 : 117 === s ? 4 : 85 === s ? 8 : 0) > 0) {
-                            for (i = u, o = 0; i > 0; i--)(u = A(a = t.input.charCodeAt(++t.position))) >= 0 ? o = (o << 4) + u : C(t, "expected hexadecimal character");
-                            t.result += j(o), t.position++
-                        } else C(t, "unknown escape sequence");
-                        n = r = t.position
-                    } else w(a) ? (N(t, n, r, !0), B(t, F(t, !1, e)), n = r = t.position) : t.position === t.lineStart && U(t) ? C(t, "unexpected end of the document within a double quoted scalar") : (t.position++, r = t.position)
-                }
-                C(t, "unexpected end of the stream within a double quoted scalar")
-            }(t, b) ? P = !0 : ! function(t) {
-                var e, n, r;
-                if (42 !== (r = t.input.charCodeAt(t.position))) return !1;
-                for (r = t.input.charCodeAt(++t.position), e = t.position; 0 !== r && !S(r) && !E(r);) r = t.input.charCodeAt(++t.position);
-                return t.position === e && C(t, "name of an alias node must contain at least one character"), n = t.input.slice(e, t.position), t.anchorMap.hasOwnProperty(n) || C(t, 'unidentified alias "' + n + '"'), t.result = t.anchorMap[n], F(t, !0, -1), !0
-            }(t) ? function(t, e, n) {
-                var r, i, o, u, a, s, c, f, l = t.kind,
-                    p = t.result;
-                if (S(f = t.input.charCodeAt(t.position)) || E(f) || 35 === f || 38 === f || 42 === f || 33 === f || 124 === f || 62 === f || 39 === f || 34 === f || 37 === f || 64 === f || 96 === f) return !1;
-                if ((63 === f || 45 === f) && (S(r = t.input.charCodeAt(t.position + 1)) || n && E(r))) return !1;
-                for (t.kind = "scalar", t.result = "", i = o = t.position, u = !1; 0 !== f;) {
-                    if (58 === f) {
-                        if (S(r = t.input.charCodeAt(t.position + 1)) || n && E(r)) break
-                    } else if (35 === f) {
-                        if (S(t.input.charCodeAt(t.position - 1))) break
-                    } else {
-                        if (t.position === t.lineStart && U(t) || n && E(f)) break;
-                        if (w(f)) {
-                            if (a = t.line, s = t.lineStart, c = t.lineIndent, F(t, !1, -1), t.lineIndent >= e) {
-                                u = !0, f = t.input.charCodeAt(t.position);
-                                continue
+                    for (; 0 !== u;) {
+                        for (z(t), t.lineIndent = 0, u = t.input.charCodeAt(t.position);
+                            (!f || t.lineIndent < l) && 32 === u;) t.lineIndent++, u = t.input.charCodeAt(++t.position);
+                        if (!f && t.lineIndent > l && (l = t.lineIndent), w(u)) p++;
+                        else {
+                            if (t.lineIndent < l) {
+                                s === v ? t.result += r.repeat("\n", c ? 1 + p : p) : s === h && c && (t.result += "\n");
+                                break
                             }
-                            t.position = o, t.line = a, t.lineStart = s, t.lineIndent = c;
-                            break
+                            for (i ? x(u) ? (y = !0, t.result += r.repeat("\n", c ? 1 + p : p)) : y ? (y = !1, t.result += r.repeat("\n", p + 1)) : 0 === p ? c && (t.result += " ") : t.result += r.repeat("\n", p) : t.result += r.repeat("\n", c ? 1 + p : p), c = !0, f = !0, p = 0, n = t.position; !w(u) && 0 !== u;) u = t.input.charCodeAt(++t.position);
+                            N(t, n, t.position, !1)
                         }
                     }
-                    u && (N(t, i, o, !1), B(t, t.line - a), i = o = t.position, u = !1), x(f) || (o = t.position + 1), f = t.input.charCodeAt(++t.position)
-                }
-                return N(t, i, o, !1), !!t.result || (t.kind = l, t.result = p, !1)
-            }(t, b, c === n) && (P = !0, null === t.tag && (t.tag = "?")) : (P = !0, null === t.tag && null === t.anchor || C(t, "alias node should not have any properties")), null !== t.anchor && (t.anchorMap[t.anchor] = t.result)) : 0 === M && (P = y && q(t, O))), null !== t.tag && "!" !== t.tag)
+                    return !0
+                }(t, b) || function(t, e) {
+                    var n, r, i;
+                    if (39 !== (n = t.input.charCodeAt(t.position))) return !1;
+                    for (t.kind = "scalar", t.result = "", t.position++, r = i = t.position; 0 !== (n = t.input.charCodeAt(t.position));)
+                        if (39 === n) {
+                            if (N(t, r, t.position, !0), 39 !== (n = t.input.charCodeAt(++t.position))) return !0;
+                            r = t.position, t.position++, i = t.position
+                        } else w(n) ? (N(t, r, i, !0), B(t, F(t, !1, e)), r = i = t.position) : t.position === t.lineStart && U(t) ? C(t, "unexpected end of the document within a single quoted scalar") : (t.position++, i = t.position);
+                    C(t, "unexpected end of the stream within a single quoted scalar")
+                }(t, b) || function(t, e) {
+                    var n, r, i, o, u, a, s;
+                    if (34 !== (a = t.input.charCodeAt(t.position))) return !1;
+                    for (t.kind = "scalar", t.result = "", t.position++, n = r = t.position; 0 !== (a = t.input.charCodeAt(t.position));) {
+                        if (34 === a) return N(t, n, t.position, !0), t.position++, !0;
+                        if (92 === a) {
+                            if (N(t, n, t.position, !0), w(a = t.input.charCodeAt(++t.position))) F(t, !1, e);
+                            else if (a < 256 && k[a]) t.result += I[a], t.position++;
+                            else if ((u = 120 === (s = a) ? 2 : 117 === s ? 4 : 85 === s ? 8 : 0) > 0) {
+                                for (i = u, o = 0; i > 0; i--)(u = A(a = t.input.charCodeAt(++t.position))) >= 0 ? o = (o << 4) + u : C(t, "expected hexadecimal character");
+                                t.result += j(o), t.position++
+                            } else C(t, "unknown escape sequence");
+                            n = r = t.position
+                        } else w(a) ? (N(t, n, r, !0), B(t, F(t, !1, e)), n = r = t.position) : t.position === t.lineStart && U(t) ? C(t, "unexpected end of the document within a double quoted scalar") : (t.position++, r = t.position)
+                    }
+                    C(t, "unexpected end of the stream within a double quoted scalar")
+                }(t, b) ? P = !0 : ! function(t) {
+                    var e, n, r;
+                    if (42 !== (r = t.input.charCodeAt(t.position))) return !1;
+                    for (r = t.input.charCodeAt(++t.position), e = t.position; 0 !== r && !S(r) && !E(r);) r = t.input.charCodeAt(++t.position);
+                    return t.position === e && C(t, "name of an alias node must contain at least one character"), n = t.input.slice(e, t.position), t.anchorMap.hasOwnProperty(n) || C(t, 'unidentified alias "' + n + '"'), t.result = t.anchorMap[n], F(t, !0, -1), !0
+                }(t) ? function(t, e, n) {
+                    var r, i, o, u, a, s, c, f, l = t.kind,
+                        p = t.result;
+                    if (S(f = t.input.charCodeAt(t.position)) || E(f) || 35 === f || 38 === f || 42 === f || 33 === f || 124 === f || 62 === f || 39 === f || 34 === f || 37 === f || 64 === f || 96 === f) return !1;
+                    if ((63 === f || 45 === f) && (S(r = t.input.charCodeAt(t.position + 1)) || n && E(r))) return !1;
+                    for (t.kind = "scalar", t.result = "", i = o = t.position, u = !1; 0 !== f;) {
+                        if (58 === f) {
+                            if (S(r = t.input.charCodeAt(t.position + 1)) || n && E(r)) break
+                        } else if (35 === f) {
+                            if (S(t.input.charCodeAt(t.position - 1))) break
+                        } else {
+                            if (t.position === t.lineStart && U(t) || n && E(f)) break;
+                            if (w(f)) {
+                                if (a = t.line, s = t.lineStart, c = t.lineIndent, F(t, !1, -1), t.lineIndent >= e) {
+                                    u = !0, f = t.input.charCodeAt(t.position);
+                                    continue
+                                }
+                                t.position = o, t.line = a, t.lineStart = s, t.lineIndent = c;
+                                break
+                            }
+                        }
+                        u && (N(t, i, o, !1), B(t, t.line - a), i = o = t.position, u = !1), x(f) || (o = t.position + 1), f = t.input.charCodeAt(++t.position)
+                    }
+                    return N(t, i, o, !1), !!t.result || (t.kind = l, t.result = p, !1)
+                }(t, b, c === n) && (P = !0, null === t.tag && (t.tag = "?")) : (P = !0, null === t.tag && null === t.anchor || C(t, "alias node should not have any properties")), null !== t.anchor && (t.anchorMap[t.anchor] = t.result)) : 0 === M && (P = y && q(t, O))), null !== t.tag && "!" !== t.tag)
                 if ("?" === t.tag) {
                     for (g = 0, m = t.implicitTypes.length; g < m; g += 1)
                         if ((_ = t.implicitTypes[g]).resolve(t.result)) {
@@ -12613,13 +12613,13 @@
                     case "camelcase":
                         return ".Inf"
                 } else if (Number.NEGATIVE_INFINITY === t) switch (e) {
-                    case "lowercase":
-                        return "-.inf";
-                    case "uppercase":
-                        return "-.INF";
-                    case "camelcase":
-                        return "-.Inf"
-                } else if (r.isNegativeZero(t)) return "-0.0";
+                        case "lowercase":
+                            return "-.inf";
+                        case "uppercase":
+                            return "-.INF";
+                        case "camelcase":
+                            return "-.Inf"
+                    } else if (r.isNegativeZero(t)) return "-0.0";
                 return n = t.toString(10), u.test(n) ? n.replace("e", ".e") : n
             },
             defaultStyle: "lowercase"
@@ -12964,13 +12964,13 @@
                     if (!z(u = t.charCodeAt(o))) return V;
                     C = C && F(u)
                 } else {
-                for (o = 0; o < t.length; o++) {
-                    if ((u = t.charCodeAt(o)) === f) s = !0, l && (c = c || o - T - 1 > r && " " !== t[T + 1], T = o);
-                    else if (!z(u)) return V;
-                    C = C && F(u)
+                    for (o = 0; o < t.length; o++) {
+                        if ((u = t.charCodeAt(o)) === f) s = !0, l && (c = c || o - T - 1 > r && " " !== t[T + 1], T = o);
+                        else if (!z(u)) return V;
+                        C = C && F(u)
+                    }
+                    c = c || l && o - T - 1 > r && " " !== t[T + 1]
                 }
-                c = c || l && o - T - 1 > r && " " !== t[T + 1]
-            }
             return s || c ? n > 9 && U(t) ? V : c ? W : Y : C && !i(t) ? B : q
         }
 
@@ -13102,14 +13102,14 @@
             var n, r, i = [],
                 o = [];
             for (function t(e, n, r) {
-                var i, o, u;
-                if (null !== e && "object" == typeof e)
-                    if (-1 !== (o = n.indexOf(e))) - 1 === r.indexOf(o) && r.push(o);
-                    else if (n.push(e), Array.isArray(e))
+                    var i, o, u;
+                    if (null !== e && "object" == typeof e)
+                        if (-1 !== (o = n.indexOf(e))) - 1 === r.indexOf(o) && r.push(o);
+                        else if (n.push(e), Array.isArray(e))
                         for (o = 0, u = e.length; o < u; o += 1) t(e[o], n, r);
                     else
                         for (i = Object.keys(e), o = 0, u = i.length; o < u; o += 1) t(e[i[o]], n, r)
-            }(t, i, o), n = 0, r = o.length; n < r; n += 1) e.duplicates.push(i[o[n]]);
+                }(t, i, o), n = 0, r = o.length; n < r; n += 1) e.duplicates.push(i[o[n]]);
             e.usedDuplicates = new Array(r)
         }
 
