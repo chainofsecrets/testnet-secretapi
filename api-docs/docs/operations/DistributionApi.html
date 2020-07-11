@@ -1,0 +1,337 @@
+<div class="main-content">
+  <h2><a name=""></a></h2>
+  <p>This is the  API</p>
+
+  <h2><a name="distributionCommunityPoolGet"></a>distributionCommunityPoolGet</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/community_pool</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="Coin"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  </ul>
+  <h2><a name="distributionDelegatorsDelegatorAddrRewardsGet"></a>distributionDelegatorsDelegatorAddrRewardsGet</h2>
+  <hr>
+  <p></p>
+  <p>Get the sum of all the rewards earned by delegations by a single delegator</p>
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/delegators/{delegatorAddr}/rewards</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="DelegatorTotalRewards"><a href="">DelegatorTotalRewards</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">delegatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 AccAddress of Delegator</p>
+	  </li>
+  </ul>
+  <h2><a name="distributionDelegatorsDelegatorAddrRewardsPost"></a>distributionDelegatorsDelegatorAddrRewardsPost</h2>
+  <hr>
+  <p></p>
+  <p>Withdraw all the delegator&#39;s delegation rewards</p>
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/delegators/{delegatorAddr}/rewards</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="StdTx"><a href="">StdTx</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">delegatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 AccAddress of Delegator</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">Withdraw request body</span>
+      <span class="param-type">Withdraw request body(Withdraw request body)</span>
+      
+      <p class="param-description"></p>
+	  </li>
+  </ul>
+  <h2><a name="distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet"></a>distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet</h2>
+  <hr>
+  <p></p>
+  <p>Query a single delegation reward by a delegator</p>
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/delegators/{delegatorAddr}/rewards/{validatorAddr}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="Coin"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">delegatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 AccAddress of Delegator</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">validatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 OperatorAddress of validator</p>
+	  </li>
+  </ul>
+  <h2><a name="distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost"></a>distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost</h2>
+  <hr>
+  <p></p>
+  <p>Withdraw a delegator&#39;s delegation reward from a single validator</p>
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/delegators/{delegatorAddr}/rewards/{validatorAddr}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="StdTx"><a href="">StdTx</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">delegatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 AccAddress of Delegator</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">validatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 OperatorAddress of validator</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">Withdraw request body</span>
+      <span class="param-type">Withdraw request body_1(Withdraw request body_1)</span>
+      
+      <p class="param-description"></p>
+	  </li>
+  </ul>
+  <h2><a name="distributionDelegatorsDelegatorAddrWithdrawAddressGet"></a>distributionDelegatorsDelegatorAddrWithdrawAddressGet</h2>
+  <hr>
+  <p></p>
+  <p>Get the delegations&#39; rewards withdrawal address. This is the address in which the user will receive the reward funds</p>
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/delegators/{delegatorAddr}/withdraw_address</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="Address"><a href="">Address</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">delegatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 AccAddress of Delegator</p>
+	  </li>
+  </ul>
+  <h2><a name="distributionDelegatorsDelegatorAddrWithdrawAddressPost"></a>distributionDelegatorsDelegatorAddrWithdrawAddressPost</h2>
+  <hr>
+  <p></p>
+  <p>Replace the delegations&#39; rewards withdrawal address for a new one.</p>
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/delegators/{delegatorAddr}/withdraw_address</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="StdTx"><a href="">StdTx</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">delegatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 AccAddress of Delegator</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">Withdraw request body</span>
+      <span class="param-type">Withdraw request body_2(Withdraw request body_2)</span>
+      
+      <p class="param-description"></p>
+	  </li>
+  </ul>
+  <h2><a name="distributionParametersGet"></a>distributionParametersGet</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/parameters</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="object"><a href="">Object</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  </ul>
+  <h2><a name="distributionValidatorsValidatorAddrGet"></a>distributionValidatorsValidatorAddrGet</h2>
+  <hr>
+  <p></p>
+  <p>Query the distribution information of a single validator</p>
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/validators/{validatorAddr}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="ValidatorDistInfo"><a href="">ValidatorDistInfo</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">validatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 OperatorAddress of validator</p>
+	  </li>
+  </ul>
+  <h2><a name="distributionValidatorsValidatorAddrOutstandingRewardsGet"></a>distributionValidatorsValidatorAddrOutstandingRewardsGet</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/validators/{validatorAddr}/outstanding_rewards</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="Coin"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">validatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 OperatorAddress of validator</p>
+	  </li>
+  </ul>
+  <h2><a name="distributionValidatorsValidatorAddrRewardsGet"></a>distributionValidatorsValidatorAddrRewardsGet</h2>
+  <hr>
+  <p></p>
+  <p>Query the commission and self-delegation rewards of validator.</p>
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/validators/{validatorAddr}/rewards</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="Coin"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">validatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 OperatorAddress of validator</p>
+	  </li>
+  </ul>
+  <h2><a name="distributionValidatorsValidatorAddrRewardsPost"></a>distributionValidatorsValidatorAddrRewardsPost</h2>
+  <hr>
+  <p></p>
+  <p>Withdraw the validator&#39;s self-delegation and commissions rewards</p>
+  <h3 class="section">URL</h3>
+  <code>https://api.secrettestnet.io/distribution/validators/{validatorAddr}/rewards</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="StdTx"><a href="">StdTx</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">validatorAddr</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Bech32 OperatorAddress of validator</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">Withdraw request body</span>
+      <span class="param-type">Withdraw request body_3(Withdraw request body_3)</span>
+      
+      <p class="param-description"></p>
+	  </li>
+  </ul>
+</div>

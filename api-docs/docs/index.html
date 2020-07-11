@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-responsive.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="assets/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+
+    <title>Testnet Secret API Docs</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-bar">
+            <h1 id="logo"><a class="logo" href="/"><span>Testnet Secret</span><span class="light">API REST Documentation</span></a></h1>
+        </div>
+    </div>
+    <div class="model-container"></div>
+    <div class="content">
+        <div class="box clearfix">
+            <div class="sidebar">
+                <div class="section-box">
+                    <div class="section-header">
+                        Overview
+                    </div>
+                    <ul>
+                        <li>Getting Started</li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/AuthApi">AuthApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/AuthApi#authAccountsAddressGet">authAccountsAddressGet</a></li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/BankApi">BankApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/BankApi#bankAccountsAddressTransfersPost">bankAccountsAddressTransfersPost</a></li>
+                        <li><a href="#!/BankApi#bankBalancesAddressGet">bankBalancesAddressGet</a></li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/DistributionApi">DistributionApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/DistributionApi#distributionCommunityPoolGet">distributionCommunityPoolGet</a></li>
+                        <li><a href="#!/DistributionApi#distributionDelegatorsDelegatorAddrRewardsGet">distributionDelegatorsDelegatorAddrRewardsGet</a></li>
+                        <li><a href="#!/DistributionApi#distributionDelegatorsDelegatorAddrRewardsPost">distributionDelegatorsDelegatorAddrRewardsPost</a></li>
+                        <li><a href="#!/DistributionApi#distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet">distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet</a></li>
+                        <li><a href="#!/DistributionApi#distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost">distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost</a></li>
+                        <li><a href="#!/DistributionApi#distributionDelegatorsDelegatorAddrWithdrawAddressGet">distributionDelegatorsDelegatorAddrWithdrawAddressGet</a></li>
+                        <li><a href="#!/DistributionApi#distributionDelegatorsDelegatorAddrWithdrawAddressPost">distributionDelegatorsDelegatorAddrWithdrawAddressPost</a></li>
+                        <li><a href="#!/DistributionApi#distributionParametersGet">distributionParametersGet</a></li>
+                        <li><a href="#!/DistributionApi#distributionValidatorsValidatorAddrGet">distributionValidatorsValidatorAddrGet</a></li>
+                        <li><a href="#!/DistributionApi#distributionValidatorsValidatorAddrOutstandingRewardsGet">distributionValidatorsValidatorAddrOutstandingRewardsGet</a></li>
+                        <li><a href="#!/DistributionApi#distributionValidatorsValidatorAddrRewardsGet">distributionValidatorsValidatorAddrRewardsGet</a></li>
+                        <li><a href="#!/DistributionApi#distributionValidatorsValidatorAddrRewardsPost">distributionValidatorsValidatorAddrRewardsPost</a></li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/GovernanceApi">GovernanceApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/GovernanceApi#govParametersDepositGet">govParametersDepositGet</a></li>
+                        <li><a href="#!/GovernanceApi#govParametersTallyingGet">govParametersTallyingGet</a></li>
+                        <li><a href="#!/GovernanceApi#govParametersVotingGet">govParametersVotingGet</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsGet">govProposalsGet</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsParamChangePost">govProposalsParamChangePost</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsPost">govProposalsPost</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsProposalIdDepositsDepositorGet">govProposalsProposalIdDepositsDepositorGet</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsProposalIdDepositsGet">govProposalsProposalIdDepositsGet</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsProposalIdDepositsPost">govProposalsProposalIdDepositsPost</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsProposalIdGet">govProposalsProposalIdGet</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsProposalIdProposerGet">govProposalsProposalIdProposerGet</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsProposalIdTallyGet">govProposalsProposalIdTallyGet</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsProposalIdVotesGet">govProposalsProposalIdVotesGet</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsProposalIdVotesPost">govProposalsProposalIdVotesPost</a></li>
+                        <li><a href="#!/GovernanceApi#govProposalsProposalIdVotesVoterGet">govProposalsProposalIdVotesVoterGet</a></li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/IBCApi">IBCApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/IBCApi#ibcChannelsOpenInitPost">ibcChannelsOpenInitPost</a></li>
+                        <li><a href="#!/IBCApi#ibcChannelsOpenTryPost">ibcChannelsOpenTryPost</a></li>
+                        <li><a href="#!/IBCApi#ibcClientsClientIdClientStateGet">ibcClientsClientIdClientStateGet</a></li>
+                        <li><a href="#!/IBCApi#ibcClientsClientIdConnectionsGet">ibcClientsClientIdConnectionsGet</a></li>
+                        <li><a href="#!/IBCApi#ibcClientsClientIdConsensusStateGet">ibcClientsClientIdConsensusStateGet</a></li>
+                        <li><a href="#!/IBCApi#ibcClientsClientIdMisbehaviourPost">ibcClientsClientIdMisbehaviourPost</a></li>
+                        <li><a href="#!/IBCApi#ibcClientsClientIdRootsHeightGet">ibcClientsClientIdRootsHeightGet</a></li>
+                        <li><a href="#!/IBCApi#ibcClientsClientIdUpdatePost">ibcClientsClientIdUpdatePost</a></li>
+                        <li><a href="#!/IBCApi#ibcClientsPost">ibcClientsPost</a></li>
+                        <li><a href="#!/IBCApi#ibcConnectionsConnectionIdGet">ibcConnectionsConnectionIdGet</a></li>
+                        <li><a href="#!/IBCApi#ibcConnectionsConnectionIdOpenAckPost">ibcConnectionsConnectionIdOpenAckPost</a></li>
+                        <li><a href="#!/IBCApi#ibcConnectionsConnectionIdOpenConfirmPost">ibcConnectionsConnectionIdOpenConfirmPost</a></li>
+                        <li><a href="#!/IBCApi#ibcConnectionsGet">ibcConnectionsGet</a></li>
+                        <li><a href="#!/IBCApi#ibcConnectionsOpenInitPost">ibcConnectionsOpenInitPost</a></li>
+                        <li><a href="#!/IBCApi#ibcConnectionsOpenTryPost">ibcConnectionsOpenTryPost</a></li>
+                        <li><a href="#!/IBCApi#ibcHeaderGet">ibcHeaderGet</a></li>
+                        <li><a href="#!/IBCApi#ibcNodeStateGet">ibcNodeStateGet</a></li>
+                        <li><a href="#!/IBCApi#ibcPacketsReceivePost">ibcPacketsReceivePost</a></li>
+                        <li><a href="#!/IBCApi#ibcPathGet">ibcPathGet</a></li>
+                        <li><a href="#!/IBCApi#ibcPortsPortIdChannelsChannelIdCloseConfirmPost">ibcPortsPortIdChannelsChannelIdCloseConfirmPost</a></li>
+                        <li><a href="#!/IBCApi#ibcPortsPortIdChannelsChannelIdCloseInitPost">ibcPortsPortIdChannelsChannelIdCloseInitPost</a></li>
+                        <li><a href="#!/IBCApi#ibcPortsPortIdChannelsChannelIdGet">ibcPortsPortIdChannelsChannelIdGet</a></li>
+                        <li><a href="#!/IBCApi#ibcPortsPortIdChannelsChannelIdNextSequenceRecvGet">ibcPortsPortIdChannelsChannelIdNextSequenceRecvGet</a></li>
+                        <li><a href="#!/IBCApi#ibcPortsPortIdChannelsChannelIdOpenAckPost">ibcPortsPortIdChannelsChannelIdOpenAckPost</a></li>
+                        <li><a href="#!/IBCApi#ibcPortsPortIdChannelsChannelIdOpenConfirmPost">ibcPortsPortIdChannelsChannelIdOpenConfirmPost</a></li>
+                        <li><a href="#!/IBCApi#ibcPortsPortIdChannelsChannelIdTransferPost">ibcPortsPortIdChannelsChannelIdTransferPost</a></li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/MintApi">MintApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/MintApi#mintingAnnualProvisionsGet">mintingAnnualProvisionsGet</a></li>
+                        <li><a href="#!/MintApi#mintingInflationGet">mintingInflationGet</a></li>
+                        <li><a href="#!/MintApi#mintingParametersGet">mintingParametersGet</a></li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/SecretRESTApi">SecretRESTApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/SecretRESTApi#nodeInfoGet">nodeInfoGet</a></li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/SlashingApi">SlashingApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/SlashingApi#slashingParametersGet">slashingParametersGet</a></li>
+                        <li><a href="#!/SlashingApi#slashingSigningInfosGet">slashingSigningInfosGet</a></li>
+                        <li><a href="#!/SlashingApi#slashingValidatorsValidatorAddrUnjailPost">slashingValidatorsValidatorAddrUnjailPost</a></li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/StakingApi">StakingApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/StakingApi#stakingDelegatorsDelegatorAddrDelegationsGet">stakingDelegatorsDelegatorAddrDelegationsGet</a></li>
+                        <li><a href="#!/StakingApi#stakingDelegatorsDelegatorAddrDelegationsPost">stakingDelegatorsDelegatorAddrDelegationsPost</a></li>
+                        <li><a href="#!/StakingApi#stakingDelegatorsDelegatorAddrDelegationsValidatorAddrGet">stakingDelegatorsDelegatorAddrDelegationsValidatorAddrGet</a></li>
+                        <li><a href="#!/StakingApi#stakingDelegatorsDelegatorAddrRedelegationsPost">stakingDelegatorsDelegatorAddrRedelegationsPost</a></li>
+                        <li><a href="#!/StakingApi#stakingDelegatorsDelegatorAddrUnbondingDelegationsGet">stakingDelegatorsDelegatorAddrUnbondingDelegationsGet</a></li>
+                        <li><a href="#!/StakingApi#stakingDelegatorsDelegatorAddrUnbondingDelegationsPost">stakingDelegatorsDelegatorAddrUnbondingDelegationsPost</a></li>
+                        <li><a href="#!/StakingApi#stakingDelegatorsDelegatorAddrUnbondingDelegationsValidatorAddrGet">stakingDelegatorsDelegatorAddrUnbondingDelegationsValidatorAddrGet</a></li>
+                        <li><a href="#!/StakingApi#stakingDelegatorsDelegatorAddrValidatorsGet">stakingDelegatorsDelegatorAddrValidatorsGet</a></li>
+                        <li><a href="#!/StakingApi#stakingDelegatorsDelegatorAddrValidatorsValidatorAddrGet">stakingDelegatorsDelegatorAddrValidatorsValidatorAddrGet</a></li>
+                        <li><a href="#!/StakingApi#stakingParametersGet">stakingParametersGet</a></li>
+                        <li><a href="#!/StakingApi#stakingPoolGet">stakingPoolGet</a></li>
+                        <li><a href="#!/StakingApi#stakingRedelegationsGet">stakingRedelegationsGet</a></li>
+                        <li><a href="#!/StakingApi#stakingValidatorsGet">stakingValidatorsGet</a></li>
+                        <li><a href="#!/StakingApi#stakingValidatorsValidatorAddrDelegationsGet">stakingValidatorsValidatorAddrDelegationsGet</a></li>
+                        <li><a href="#!/StakingApi#stakingValidatorsValidatorAddrGet">stakingValidatorsValidatorAddrGet</a></li>
+                        <li><a href="#!/StakingApi#stakingValidatorsValidatorAddrUnbondingDelegationsGet">stakingValidatorsValidatorAddrUnbondingDelegationsGet</a></li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/SupplyApi">SupplyApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/SupplyApi#supplyTotalDenominationGet">supplyTotalDenominationGet</a></li>
+                        <li><a href="#!/SupplyApi#supplyTotalGet">supplyTotalGet</a></li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/TendermintRPCApi">TendermintRPCApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/TendermintRPCApi#blocksHeightGet">blocksHeightGet</a></li>
+                        <li><a href="#!/TendermintRPCApi#blocksLatestGet">blocksLatestGet</a></li>
+                        <li><a href="#!/TendermintRPCApi#syncingGet">syncingGet</a></li>
+                        <li><a href="#!/TendermintRPCApi#validatorsetsHeightGet">validatorsetsHeightGet</a></li>
+                        <li><a href="#!/TendermintRPCApi#validatorsetsLatestGet">validatorsetsLatestGet</a></li>
+                    </ul>
+                </div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <a href="#!/TransactionsApi">TransactionsApi</a>
+                    </div>
+                    <ul>
+                        <li><a href="#!/TransactionsApi#txsDecodePost">txsDecodePost</a></li>
+                        <li><a href="#!/TransactionsApi#txsEncodePost">txsEncodePost</a></li>
+                        <li><a href="#!/TransactionsApi#txsGet">txsGet</a></li>
+                        <li><a href="#!/TransactionsApi#txsHashGet">txsHashGet</a></li>
+                        <li><a href="#!/TransactionsApi#txsPost">txsPost</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="non-sidebar">
+                <div class="main-content">
+                    <h2>Getting Started</h2>
+                    <p>To begin using the Testnet Secret API, follow the steps below.</p>
+                    <h3>Postman</h3>
+                    <p>TODO</p>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
